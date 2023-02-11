@@ -1,0 +1,46 @@
+@use "./variables";
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  height: clamp(100vh, 900px, 200vh);
+  background: linear-gradient(20deg, variables.$item-bg, variables.$main-bg);
+}
+
+.main-container {
+  margin: 0 auto;
+  padding: 0 8px;
+  position: relative;
+  width: variables.$device-width;
+  height: variables.$device-height;
+  box-shadow: 2px 3px 20px 10px darken(variables.$main-bg, 40%);
+
+  &-header {
+    height: 120px;
+    margin: 0 -8px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: variables.$header-bg;
+  }
+}
+
+.add-todo {
+  width: 100%;
+  border: none;
+  height: 82px;
+  color: #8b8787;
+  margin-top: 20px;
+  font-size: 24px;
+  border-radius: 15px;
+}
+
+#add {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
